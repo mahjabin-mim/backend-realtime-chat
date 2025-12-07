@@ -10,7 +10,8 @@ const config: TypeOrmModuleOptions = {
   username: process.env.DB_USERNAME || 'postgres',
   password: process.env.DB_PASSWORD || 'postgres',
   database: process.env.DB_NAME || 'chat_db',
-  entities: ['dist/**/*.entity{.ts,.js}'],
+  // entities: ['dist/**/*.entity{.ts,.js}'], // Removed for Vercel compatibility
+  autoLoadEntities: true,
   synchronize: true,
   ssl: process.env.DB_HOST !== 'localhost',
   extra: {
