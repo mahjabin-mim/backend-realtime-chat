@@ -12,6 +12,15 @@ const config: TypeOrmModuleOptions = {
   database: process.env.DB_NAME || 'chat_db',
   entities: ['dist/**/*.entity{.ts,.js}'],
   synchronize: true,
+  ssl: process.env.DB_HOST !== 'localhost',
+  extra: {
+    ssl:
+      process.env.DB_HOST !== 'localhost'
+        ? {
+            rejectUnauthorized: false,
+          }
+        : null,
+  },
 };
 
 export default config;

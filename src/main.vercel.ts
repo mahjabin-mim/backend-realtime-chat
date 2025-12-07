@@ -7,7 +7,11 @@ export default async function handler(req, res) {
   if (!app) {
     app = await NestFactory.create(AppModule);
     app.enableCors({
-      origin: '*', // Allow all origins for now, or specify your frontend URL
+      origin: [
+        'http://localhost:3000',
+        'https://frontend-realtime-chat.vercel.app',
+        /\.vercel\.app$/ 
+      ],
       methods: '*',
       credentials: true,
     });
