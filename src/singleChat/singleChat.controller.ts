@@ -1,8 +1,8 @@
 import { Body, Controller, Get, Post, UseGuards, Request } from "@nestjs/common";
 import { SingleChatService } from "./singleChat.service";
 import { SingleChatDto } from "./DTOs/singleChat.dto";
-import { SingleChat } from "src/entities/singleChat.entity";
-import { JwtAuthGuard } from "src/auth/guard/jwt-auth.guard";
+import { SingleChat } from "../entities/singleChat.entity";
+import { JwtAuthGuard } from "../auth/guard/jwt-auth.guard";
 import { log } from "console";
 
 @Controller('singlechat')

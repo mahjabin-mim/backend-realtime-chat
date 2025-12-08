@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConversationService } from './conversation.service';
 import { ConversationController } from './conversation.controller';
-import { Conversation } from 'src/entities/conversation.entity';
+import { Conversation } from '../entities/conversation.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Conversation])],

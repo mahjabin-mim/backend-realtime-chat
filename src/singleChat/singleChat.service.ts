@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { SingleChat } from "src/entities/singleChat.entity";
+import { SingleChat } from "../entities/singleChat.entity";
 import { Repository } from "typeorm";
 import { SingleChatDto } from "./DTOs/singleChat.dto";
 
